@@ -1,0 +1,218 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Trebuchet MS', sans-serif;
+}
+
+html {
+    background-image: url("../img/background-pattern.png");
+    background-size: cover;
+}
+
+@font-face {
+    font-family: "Exo 2.0";
+    font-style: normal;
+    font-weight: 400;
+    src: local("Exo 2.0"),
+    url("/markup/fonts/Exo2.0-Thin.otf") format("otf")
+}
+
+
+@font-face {
+    font-family: 'Trebuchet MS';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Trebuchet MS'), url('../fonts/trebuc.woff') format('woff');
+}
+
+
+@font-face {
+    font-family: 'Trebuchet MS Italic';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Trebuchet MS Italic'), url('../fonts/Trebuchet-MS-Italic.woff') format('woff');
+}
+
+.catalog {
+    margin: 0 auto;
+    max-width: 1280px;
+    min-width: 320px;
+    padding: 20px 40px 67px 40px;
+}
+
+.catalog__main-header {
+    font-family: 'Exo 2', sans-serif;
+    font-size: 36px;
+    color: #ffffff;
+    text-align: center;
+}
+
+.catalog__list {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    padding: 24px 0 0 0;
+    flex-wrap: wrap;
+}
+
+.catalog__item {
+    margin: 16px 20px;
+}
+
+.product-card {
+    width: 320px;
+    height: 480px;
+    position: relative;
+    border-radius: 6px;
+}
+
+.product-card--active .product-card__sticker{
+    background-color: #E52E7A;
+}
+
+.product-card--active .product-card__header-text {
+    border: solid #E52E7A 3px;
+    border-bottom: none;
+    border-left: none;
+}
+
+.product-card--active .product-card__main {
+    border: solid #E52E7A 3px;
+    border-top: none;
+}
+
+.product-card--active .corner {
+    background: linear-gradient(to bottom right, transparent 48%, #E52E7A 48%, #E52E7A 53%, #F2F2F2 53%);
+}
+
+.product-card--disabled .product-card__header-text,
+.product-card--disabled .product-card__name,
+.product-card--disabled .product-card__description,
+.product-card--disabled .product-card__promotion {
+    color: #B3B3B3;
+}
+
+.product-card--disabled .product-card__sticker {
+    background-color: #979797;
+}
+
+.product-card--disabled .product-card__header-text {
+    border: solid #979797 3px;
+    border-bottom: none;
+    border-left: none;
+}
+
+.product-card--disabled .product-card__main {
+    border: solid #979797 3px;
+    border-top: none;
+}
+
+.product-card--disabled .corner {
+    background: linear-gradient(to bottom right, transparent 48%, #979797 48%, #979797 53%, #F2F2F2 53%);
+}
+
+.product-card--disabled .product-card__img {
+    filter: contrast(40%) brightness(130%);
+}
+
+.product-card__header {
+    height: 10%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 40px 1fr 1fr 1fr 1fr;
+}
+
+.product-card__header-text {
+    background-color: #F2F2F2;
+    grid-area: 1/2/2/6;
+    border: solid #1698D9 3px;
+    border-bottom: none;
+    border-left: none;
+    border-radius: 0 6px 0 0;
+    color: #666666;
+    font-size: 16px;
+    padding: 21px 0 0 5px;
+}
+
+.product-card__name {
+    font-size: 48px;
+    font-weight: 700;
+    padding: 0 0 0 45px;
+}
+
+.product-card__description {
+    font-size: 24px;
+    font-weight: 700;
+    padding: 0 0 15px 51px;
+}
+
+.product-card__promotion {
+    font-size: 14px;
+    padding: 0 0 0 51px;
+    color: #666666;
+    width: 10px;
+
+}
+
+.corner {
+    grid-area: 1/1/2/1;
+    background: linear-gradient(to bottom right, transparent 48%, #1698D9 48%, #1698D9 53%, #F2F2F2 53%);
+}
+
+.product-card__main {
+    background-color: #F2F2F2;
+    height: 90%;
+    width: 100%;
+    border: solid #1698D9 3px;
+    border-top: none;
+    border-radius: 0 0 5px 5px;
+}
+
+.product-card__img {
+    position: absolute;
+    bottom: 3px;
+}
+
+.product-card__sticker {
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    background-color: #1698D9;
+    position: absolute;
+    bottom: 16px;
+    right: 16px;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-card__sticker--number {
+    font-size: 42px;
+    line-height: 30px;
+}
+
+.product-card__sticker--kg {
+    font-size: 21px;
+
+}
+
+.catalog__action-text {
+    font-size: 13px;
+    color: #ffffff;
+    text-align: center;
+    padding: 14px 0 0 0;
+}
+
+.catalog__action-text--disabled {
+    color: #FFFF66;
+}
+
+.catalog__link {
+    color: #1698D9;
+    text-decoration: none;
+    border-bottom: 1px dashed #1698D9;
+}
+
